@@ -12,3 +12,6 @@ pre {
   max-height: 500px;
 }
 
+.redux-flow {
+  flex: initial !important;
+}

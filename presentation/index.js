@@ -34,9 +34,6 @@ import preloader from "spectacle/lib/utils/preloader";
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
-// Counter
-import Counter from './counter';
-
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
@@ -242,6 +239,7 @@ export default class Presentation extends React.Component {
               Exercises
             </Heading>
             <List>
+              <Appear><ListItem>Implement the core idea of Redux (hint: first example)</ListItem></Appear>
               <Appear><ListItem>Push application <code>state</code> (amount) to Redux</ListItem></Appear>
               <Appear><ListItem>*Add another amount to track</ListItem></Appear>
               <Appear><ListItem>**Implement a MobX variant</ListItem></Appear>
@@ -331,6 +329,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Instead of returning a thunk, operate with generators</ListItem></Appear>
               <Appear><ListItem>Your browser might need a polyfill for generators to work</ListItem></Appear>
               <Appear><ListItem>Easier to test due to the looser coupling by default</ListItem></Appear>
+              <Appear><ListItem><Link href="https://github.com/jfairbank/redux-saga-test-plan">redux-saga-test-plan</Link></ListItem></Appear>
             </List>
           </Slide>
 
