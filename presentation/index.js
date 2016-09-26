@@ -105,14 +105,23 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Utilities like <Link href="http://redux.js.org/docs/api/combineReducers.html">combineReducers</Link> to manage complexity &#8594; Single tree for state</ListItem></Appear>
               <Appear><ListItem>Actions == Something happened</ListItem></Appear>
               <Appear><ListItem>Reducers == How application state changes (pure!)</ListItem></Appear>
-              <Appear><ListItem><Link href="https://github.com/gaearon/normalizr">Normalize</Link> to make it easier to write reducers</ListItem></Appear>
-              <Appear><ListItem>Extend through middleware and solutions around Redux</ListItem></Appear>
-              <Appear><ListItem>Strong ecosystem</ListItem></Appear>
             </List>
           </Slide>
 
           <Slide transition={slideTransition} className="redux-flow">
             <TweetEmbed id='727821044308967425' />
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading size={1}>
+              Redux Continued
+            </Heading>
+            <List>
+              <Appear><ListItem>Time travel, undo, hot module replacement (HMR) through design</ListItem></Appear>
+              <Appear><ListItem><Link href="https://github.com/gaearon/normalizr">Normalize</Link> to make it easier to write reducers</ListItem></Appear>
+              <Appear><ListItem>Extend through middleware and solutions around Redux</ListItem></Appear>
+              <Appear><ListItem>Strong ecosystem</ListItem></Appear>
+            </List>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="primary">
@@ -176,8 +185,10 @@ export default class Presentation extends React.Component {
             </Heading>
             <List>
               <Appear><ListItem>Split application to <b>containers</b> (connect) and <b>presentational</b> components</ListItem></Appear>
-              <Appear><ListItem>Push <code>connect</code> as low in the hierarchy as possible to improve performance</ListItem></Appear>
+              <Appear><ListItem>Push <code>connect</code> low in the hierarchy to improve performance</ListItem></Appear>
               <Appear><ListItem>Use <Link href="https://github.com/reactjs/reselect">reselect</Link> to deal with derived data</ListItem></Appear>
+              <Appear><ListItem>Gotcha: <code>connect</code> is in pure mode by default, not always the right choice (routing)</ListItem></Appear>
+              <Appear><ListItem>Know your tools (read their APIs and code)</ListItem></Appear>
             </List>
           </Slide>
 
@@ -195,9 +206,8 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Modeled after spreadsheets</ListItem></Appear>
               <Appear><ListItem>Wraps data structures in observables</ListItem></Appear>
               <Appear><ListItem>Supports also <code>computed</code> data</ListItem></Appear>
-              <Appear><ListItem>Mutable structures &#8594; Easier reference handling</ListItem></Appear>
-              <Appear><ListItem>Use <code>autorun</code> for side effects (printing, persistency)</ListItem></Appear>
-              <Appear><ListItem>Light alternative to Redux</ListItem></Appear>
+              <Appear><ListItem>Mutable structures &#8594; Easier reference handling. Nested structures are fine</ListItem></Appear>
+              <Appear><ListItem>Use <code>autorun</code> for side effects (logging, persistency)</ListItem></Appear>
             </List>
           </Slide>
 
@@ -210,6 +220,18 @@ export default class Presentation extends React.Component {
               source={require("raw!../examples/mobx_01.jsx")}
               margin="20px auto"
             />
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading size={1}>
+              MobX Continued
+            </Heading>
+            <List>
+              <Appear><ListItem>Light alternative to Redux. A decent starting point.</ListItem></Appear>
+              <Appear><ListItem>Less boilerplate, good performance out of the box</ListItem></Appear>
+              <Appear><ListItem>More work needed for time travel, undo, serialization (<code>toJSON</code>, <code>fromJSON</code>)</ListItem></Appear>
+              <Appear><ListItem>Use the right tool for the right purpose (avoid dogma)</ListItem></Appear>
+            </List>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="primary">
@@ -228,9 +250,10 @@ export default class Presentation extends React.Component {
               <Link href="https://www.npmjs.com/package/mobx-react">mobx-react</Link> Recap
             </Heading>
             <List>
-              <Appear><ListItem>No distinction between container and presentational components</ListItem></Appear>
+              <Appear><ListItem>No distinction between <b>container</b> and <b>presentational</b> components</ListItem></Appear>
               <Appear><ListItem>Annotate all components that are specific to your application</ListItem></Appear>
-              <Appear><ListItem>MobX deals with updating for you</ListItem></Appear>
+              <Appear><ListItem>MobX handles updating for you</ListItem></Appear>
+              <Appear><ListItem>More discipline required (great power &#8594; great responsibility)</ListItem></Appear>
             </List>
           </Slide>
 

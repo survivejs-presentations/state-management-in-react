@@ -7,13 +7,15 @@ import { sawCats } from './actions';
 }), {
   sawCats
 })
-export default class CatCounter extends React.Component {
+class CatCounter extends React.Component {
   render() {
     ...
   }
 }
 
-// Alternative
+export default CatCounter;
+
+// Alternative, you can also `compose` hocs
 export default connect(({ amount }) => ({
   amount
 }), {
