@@ -22,6 +22,7 @@ function sawCats(amount) {
   };
 }
 
-const store = amountReducer({ amount: 0 }, {});
+const state = { amount: 0 };
+const store = amountReducer(state, {});
 console.log(store); // { amount: 0 }
 console.log(amountReducer(store, sawCats(1))); // { amount: 1 }
