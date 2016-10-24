@@ -48,7 +48,10 @@ const images = mapValues({
 preloader(images);
 
 const theme = createTheme({
-  primary: "#09b5c4"
+  primary: "white",
+  secondary: "black",
+  tertiary: "#09b5c4",
+  quartenary: "rgba(255, 219, 169, 0.43)"
 });
 
 export default class Presentation extends React.Component {
@@ -56,8 +59,8 @@ export default class Presentation extends React.Component {
     return (
       <Spectacle theme={theme}>
         <Deck transition={slideTransition} transitionDuration={500}>
-          <Slide transition={slideTransition} bgColor="primary">
-            <Heading size={1} fit caps lineHeight={1} textColor="black">
+          <Slide transition={slideTransition} bgColor="secondary">
+            <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
               State Management in React
             </Heading>
           </Slide>
@@ -86,12 +89,12 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Image src={images.flux} margin="40px auto" height="324px" />
           </Slide>
 
-          <Slide transition={slideTransition}>
-            <Heading size={2}>
+          <Slide transition={slideTransition} bgColor="secondary">
+            <Heading size={2} textColor="tertiary">
               Redux
             </Heading>
           </Slide>
@@ -124,7 +127,7 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               Minimal <Link href="http://redux.js.org/">Redux</Link>
             </Heading>
@@ -135,7 +138,7 @@ export default class Presentation extends React.Component {
             />
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               <Link href="http://redux.js.org/">Redux</Link> with a Store
             </Heading>
@@ -146,7 +149,7 @@ export default class Presentation extends React.Component {
             />
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               Connecting Using <Link href="https://www.npmjs.com/package/react-redux">react-redux</Link> 1/3
             </Heading>
@@ -157,7 +160,7 @@ export default class Presentation extends React.Component {
             />
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               Connecting Using <Link href="https://www.npmjs.com/package/react-redux">react-redux</Link> 2/3
             </Heading>
@@ -168,7 +171,7 @@ export default class Presentation extends React.Component {
             />
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               Connecting Using <Link href="https://www.npmjs.com/package/react-redux">react-redux</Link> 3/3
             </Heading>
@@ -192,8 +195,8 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={slideTransition}>
-            <Heading size={2}>
+          <Slide transition={slideTransition} bgColor="secondary">
+            <Heading size={2} textColor="tertiary">
               MobX
             </Heading>
           </Slide>
@@ -211,7 +214,7 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               Minimal <Link href="https://mobxjs.github.io/mobx/">MobX</Link>
             </Heading>
@@ -234,7 +237,7 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               Connecting Using <Link href="https://www.npmjs.com/package/mobx-react">mobx-react</Link>
             </Heading>
@@ -269,19 +272,19 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="white">
-            <Heading size={2} textColor="primary">
+          <Slide transition={slideTransition} bgColor="secondary">
+            <Heading size={2} textColor="tertiary">
               Async
             </Heading>
           </Slide>
 
-          <Slide transition={slideTransition}>
-            <Heading size={2}>
+          <Slide transition={slideTransition} bgColor="secondary">
+            <Heading size={2} textColor="tertiary">
               redux-thunk
             </Heading>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               Async with <Link href="https://www.npmjs.com/package/redux-thunk">redux-thunk</Link> 1/2
             </Heading>
@@ -292,7 +295,7 @@ export default class Presentation extends React.Component {
             />
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               Async with <Link href="https://www.npmjs.com/package/redux-thunk">redux-thunk</Link> 2/2
             </Heading>
@@ -315,13 +318,13 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={slideTransition}>
-            <Heading size={2}>
+          <Slide transition={slideTransition} bgColor="secondary">
+            <Heading size={2} textColor="tertiary">
               redux-saga
             </Heading>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               <Link href="https://www.npmjs.com/package/redux-saga">redux-saga</Link> 1/2
             </Heading>
@@ -332,7 +335,7 @@ export default class Presentation extends React.Component {
             />
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               <Link href="https://www.npmjs.com/package/redux-saga">redux-saga</Link> 2/2
             </Heading>
@@ -356,13 +359,13 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={slideTransition}>
-            <Heading size={2}>
+          <Slide transition={slideTransition} bgColor="secondary">
+            <Heading size={2} textColor="tertiary">
               Async in MobX
             </Heading>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="primary">
+          <Slide transition={slideTransition}>
             <Heading size={4}>
               Async with <Link href="https://www.npmjs.com/package/mobx">MobX</Link>
             </Heading>
@@ -402,9 +405,9 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="white" notes="">
+          <Slide transition={slideTransition}>
             <Link href="http://www.survivejs.com/">
-              <Heading size={1} textColor="primary">
+              <Heading size={1}>
                 SurviveJS
               </Heading>
             </Link>
@@ -420,11 +423,6 @@ export default class Presentation extends React.Component {
                 Juho Vepsäläinen
               </Heading>
             </Link>
-            <Layout>
-              <Text>
-                <Link href="http://www.appelsiini.fi/">With special thanks to Elisa Appelsiini</Link>
-              </Text>
-            </Layout>
           </Slide>
         </Deck>
       </Spectacle>
